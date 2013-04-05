@@ -24,10 +24,10 @@
     <ClInclude Include="lista.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drzewo_binarne.h">
+    <ClInclude Include="struktury.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="struktury.h">
+    <ClInclude Include="drzewo_binarne.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
