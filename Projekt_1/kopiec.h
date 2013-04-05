@@ -1,4 +1,5 @@
-#pragma once
+#ifndef KOPIEC_HEADER
+#define KOPIEC_HEADER
 class kopiec
 {
 public:
@@ -6,3 +7,4 @@ public:
 	~kopiec(void);
 };
 
+#endif

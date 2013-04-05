@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LISTA_HEADER
+#define LISTA_HEADER
 class lista
 {
 public:
@@ -6,3 +7,4 @@ public:
 	~lista(void);
 };
 
+#endif
