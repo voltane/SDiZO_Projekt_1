@@ -1,5 +1,5 @@
 #include "tablica.h"
-
+#include <stdlib.h>
 
 tablica::tablica(void)
 {
@@ -37,10 +37,14 @@ void tablica::skasuj_tablice(){
 	tab=0;
 	ilosc_elementow=0;
 };
-void tablica::nowa_tablica(int ilosc){
+void tablica::nowa_tablica(int ilosc,int min, int max, int seed){
+	srand(seed);
 	if(tab!=0){
 		ilosc_elementow=ilosc;
 		tab=new int[ilosc];
+		for(int a=0;a<=(ilosc-1);a++){
+			tab[a]=(rand()% + (max-min)) + min;
+		}
 		ilosc_tablic++;
 	}
 };
