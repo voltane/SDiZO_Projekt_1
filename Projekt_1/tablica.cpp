@@ -28,10 +28,9 @@ void tablica::dodaj_element(int i){
 	tab=tab_pomocnicza;
 	ilosc_elementow++;
 };
-int tablica::wyszukaj_element(int i){
+void tablica::wyszukaj_element(int i){
 	for(int a=0;a<=ilosc_elementow;a++){
-		if(tab[a]=i){return a;}
-		else return -1;
+		if(tab[a]=i){break;}
 	}
 };
 void tablica::skasuj_tablice(){

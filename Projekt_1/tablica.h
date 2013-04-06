@@ -7,7 +7,7 @@ public:
 	// metody potrzebne do pomiarów
 	void dodaj_element(int i);					 
 	void usun_element(int i);	
-	int wyszukaj_element(int i);
+	void wyszukaj_element(int i);
 	// metody pozwalajace pracowac na jednym obiekcie (mniej kodu)
 	void nowa_tablica(int ilosc);				 
 	void skasuj_tablice();					
