@@ -4,6 +4,5 @@
 class drzewo_binarne{
 	drzewo_binarne(void);
 	~drzewo_binarne(void);
-
-}
+};
 #endif

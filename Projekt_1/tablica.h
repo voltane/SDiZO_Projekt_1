@@ -4,6 +4,8 @@ class tablica{
 private:
 	int *tab, ilosc_tablic, ilosc_elementow;	 //wszystkie potrzebne statystyki
 public:
+	// metody do testów
+	int wyswietl_element(int i);
 	// metody potrzebne do pomiarów
 	void dodaj_element(int i);					 
 	void usun_element(int i);	

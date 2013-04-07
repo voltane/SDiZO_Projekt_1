@@ -1,7 +1,6 @@
 #ifndef KOPIEC_HEADER
 #define KOPIEC_HEADER
-class kopiec
-{
+class kopiec{
 public:
 	kopiec(void);
 	~kopiec(void);

@@ -87,6 +87,7 @@
     <ClCompile Include="kopiec.cpp" />
     <ClCompile Include="lista.cpp" />
     <ClCompile Include="tablica.cpp" />
+    <ClCompile Include="testy.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

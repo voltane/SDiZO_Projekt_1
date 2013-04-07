@@ -44,5 +44,8 @@
     <ClCompile Include="drzewo_binarne.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="testy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

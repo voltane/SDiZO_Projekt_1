@@ -10,6 +10,9 @@ tablica::tablica(void)
 tablica::~tablica(void)
 {
 }
+int tablica::wyswietl_element(int i){
+	return tab[i];
+};
 void tablica::usun_element(int i){
 	int *tab2 = new int[ilosc_elementow-1];
 	for(int a=0;a<=ilosc_elementow;a++){
@@ -39,7 +42,7 @@ void tablica::skasuj_tablice(){
 };
 void tablica::nowa_tablica(int ilosc,int min, int max, int seed){
 	srand(seed);
-	if(tab!=0){
+	if(tab==0){
 		ilosc_elementow=ilosc;
 		tab=new int[ilosc];
 		for(int a=0;a<=(ilosc-1);a++){
