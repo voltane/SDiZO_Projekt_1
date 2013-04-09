@@ -7,7 +7,7 @@ int main(){
 	
 	char w;
 	do{
-	cout << "Tu testujemy struktury.\n [T] Tablica.\n [L] Lista.\n [Q] Koniec."<<endl;
+	cout << "\nTu testujemy struktury.\n [T] Tablica.\n [L] Lista.\n [Q] Koniec."<<endl;
 	cin >> w;
 	switch(w){
 	case 'T':{
@@ -26,18 +26,52 @@ int main(){
 		}
 	case 'L':
 		{
-			unsigned long ilosc,min,max;
-			lista Lista;
-			cout << "Podaj ilosc, wartosc min i wartosc max: ";
-			cin >> ilosc;
-			cin >> min;
-			cin >> max;
-			Lista.nowa_lista(ilosc,min,max,time(NULL));
-			int h=Lista.podaj_ilosc_elementow();
-			for(unsigned long i=0;i<=(h-1);i++){
-				cout << Lista.podaj_wartosc(i)<<endl;
-			}	
-			break;
+			lista l;
+			char Q;
+			do{
+			unsigned long ilosc,kierunek;
+			system("cls");
+			cout << "\nLista. Wybierz co chcesz zrobic:\nA. Nowa lista.\nB.Wyswietl liste.\nC.Dodaj element.\nQ.Wroc do menu glownego.\n";
+			cin >> Q;
+			switch(Q){
+				case 'A':{
+					cout << "Podaj ilosc: ";cin >> ilosc;
+					l.nowaLista(ilosc,time(NULL));
+					break;
+				}
+				case 'B':{
+					char w;
+					cout << l.WyswietlListe();
+					cin >> w;
+						 break;}
+				case 'C':{
+					int w;
+					cout << "\nWybierz jak dodac: \n 1. Na poczatku.\n 2. Na koncu.\n 3. W srodek.\n";
+					cin >> w;
+					switch(w){
+						case 1:{
+							int wartosc;
+							cout << "Podaj wartosc elementu: "; cin >> wartosc;
+							l.dodajNaPoczatek(l.NowyElement(wartosc));
+							break;}
+						case 2:{
+							int wartosc;
+							cout << "Podaj wartosc elementu: "; cin >> wartosc;
+							l.dodajNaKoniec(l.NowyElement(wartosc));
+							break;}
+						case 3:{
+							int numer,wartosc;
+							cout << "Podaj wartosc elementu: "; cin >> wartosc;
+							cout << "Podaj numer poprzednika: "; cin >> numer;
+							l.dodajWSrodku(l.NowyElement(wartosc),l.WyszukajElement(numer));
+							break;}
+					}
+
+					
+					break;}
+				default: break;
+			}
+			}while(Q!='Q');
 		}
 	default:
 		{

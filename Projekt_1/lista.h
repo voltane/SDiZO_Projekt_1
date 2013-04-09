@@ -1,32 +1,28 @@
 #ifndef LISTA_HEADER
 #define LISTA_HEADER
+#include <sstream>
 class lista{
-private:
-	struct _lista{
-		unsigned long *p;
-		int wartosc;
-		unsigned long *n;
-		unsigned long index;
-	};
-	_lista *l;
-	unsigned long ilosc_elementow, ilosc_list;
-	unsigned long *start,*koniec;
-	
 public:
-	// metody potrzebne do testów
-	void wyswietl_liste();
-	int podaj_wartosc(unsigned long i);
-	unsigned long podaj_poprzednika(int i);
-	unsigned long podaj_nastepnika(int i);
-	unsigned long podaj_ilosc_elementow();
-	//glowne metody
-	void nowa_lista(int ilosc,int min, int max, int seed);
-	void skasuj_liste();
-	void dodaj_element(int poprzednik, int nastepnik, int wartosc);
-	void usun_element();
-	void wyszukaj_element();
+	struct ElementListy{
+		int wartosc;
+		struct ElementListy *poprzedni, *nastepny;
+	};
 	lista(void);
 	~lista(void);
+	void nowaLista(int ilosc, int seed);
+	void dodajNaPoczatek(ElementListy *p); // dodajemy na poczatek
+	void dodajNaKoniec(ElementListy *p); // dodajemy na koniec
+	void dodajWSrodku(ElementListy *element,ElementListy *poprzednik);
+
+	ElementListy *NowyElement(int wartosc); // nowy element listy
+	void UsunElement();
+	ElementListy *WyszukajElement(int index);
+	// interfejs
+	unsigned long podajIloscElementow();
+	std::string WyswietlListe();
+private:
+	ElementListy *glowa, *ogon, *element;
+	unsigned long ilosc_elementow, ilosc_list;
 };
 
 #endif
