@@ -31,7 +31,7 @@ int main(){
 			do{
 			unsigned long ilosc,kierunek;
 			system("cls");
-			cout << "\nLista. Wybierz co chcesz zrobic:\nA. Nowa lista.\nB.Wyswietl liste.\nC.Dodaj element.\nQ.Wroc do menu glownego.\n";
+			cout << "\nLista. Wybierz co chcesz zrobic:\nA. Nowa lista.\nB.Wyswietl liste.\nC.Dodaj element.\nD. Usunac element.\nQ.Wroc do menu glownego.\n";
 			cin >> Q;
 			switch(Q){
 				case 'A':{
@@ -66,9 +66,13 @@ int main(){
 							l.dodajWSrodku(l.NowyElement(wartosc),l.WyszukajElement(numer));
 							break;}
 					}
-
-					
-					break;}
+					break;
+						 }
+				case 'D':{
+					   int numer;
+					   cout << "Podaj index elementu ktory chcesz usunac: "; cin >> numer;
+					   l.UsunElement(l.WyszukajElement(numer));
+					   break;}
 				default: break;
 			}
 			}while(Q!='Q');

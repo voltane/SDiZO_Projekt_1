@@ -15,7 +15,7 @@ public:
 	void dodajWSrodku(ElementListy *element,ElementListy *poprzednik);
 
 	ElementListy *NowyElement(int wartosc); // nowy element listy
-	void UsunElement();
+	void UsunElement(ElementListy *element);
 	ElementListy *WyszukajElement(int index);
 	// interfejs
 	unsigned long podajIloscElementow();

@@ -65,8 +65,15 @@ void lista::dodajWSrodku(ElementListy *element, ElementListy *nastepnik){
     else ogon = element;
     ilosc_elementow++;
 };
-void lista::UsunElement(){
-
+void lista::UsunElement(ElementListy *element){
+      if(element->poprzedni){
+		  element->poprzedni->nastepny = element->nastepny;}
+      else{
+		  glowa = element->nastepny;}
+      if(element->nastepny){
+		  element->nastepny->poprzedni = element->poprzedni;}
+      else ogon = element->poprzedni;
+      ilosc_elementow--;
 }
 lista::ElementListy *lista::WyszukajElement(int index){
 	element = new ElementListy;
