@@ -3,18 +3,23 @@
 class lista{
 private:
 	struct _lista{
-		int poprzednik;
+		unsigned long *p;
 		int wartosc;
-		int nastepnik;
+		unsigned long *n;
+		unsigned long index;
 	};
 	_lista *l;
-	int ilosc_elementow, ilosc_list;
+	unsigned long ilosc_elementow, ilosc_list;
+	unsigned long *start,*koniec;
+	
 public:
 	// metody potrzebne do testów
-	int podaj_wartosc(int i);
-	int podaj_poprzednika(int i);
-	int podaj_nastepnika(int i);
-	int podaj_ilosc_elementow();
+	void wyswietl_liste();
+	int podaj_wartosc(unsigned long i);
+	unsigned long podaj_poprzednika(int i);
+	unsigned long podaj_nastepnika(int i);
+	unsigned long podaj_ilosc_elementow();
+	//glowne metody
 	void nowa_lista(int ilosc,int min, int max, int seed);
 	void skasuj_liste();
 	void dodaj_element(int poprzednik, int nastepnik, int wartosc);
