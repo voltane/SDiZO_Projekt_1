@@ -3,11 +3,9 @@
 #include <iostream>
 using namespace std;
 int main(){
-
-	
 	char w;
 	do{
-	cout << "\nTu testujemy struktury.\n [T] Tablica.\n [L] Lista.\n [Q] Koniec."<<endl;
+	cout << "\nTu testujemy struktury.\n [T] Tablica.\n [L] Lista.\n [K] Kopiec binarny.\n [Q] Koniec."<<endl;
 	cin >> w;
 	switch(w){
 	case 'T':{
@@ -29,7 +27,7 @@ int main(){
 			lista l;
 			char Q;
 			do{
-			unsigned long ilosc,kierunek;
+			unsigned long ilosc;
 			system("cls");
 			cout << "\nLista. Wybierz co chcesz zrobic:\nA. Nowa lista.\nB.Wyswietl liste.\nC.Dodaj element.\nD. Usunac element.\nQ.Wroc do menu glownego.\n";
 			cin >> Q;
@@ -76,6 +74,40 @@ int main(){
 				default: break;
 			}
 			}while(Q!='Q');
+		}
+	case 'K':
+		{
+			kopiec k;
+			char Q;
+			do{
+				unsigned long ilosc;
+				int max, min;
+				system("cls");
+				cout << "\nKopiec. Wybierz co chcesz zrobic:\nA. Nowy kopiec.\nB.Wyswietl kopiec.\nC.Dodaj element.\nD. Usunac element.\nQ.Wroc do menu glownego.\n";
+				cin >> Q;
+			switch(Q){
+				case 'A':{
+					cout << "Podaj ilosc, element max i min: ";cin >> ilosc;cin >> max;cin >> min;
+					k.nowyKopiec(ilosc,max,min,time(NULL));
+					break;
+				}
+				case 'B':{
+					char w;
+					cout << k.wyswietlKopiec();
+					cin >> w;
+						 break;}
+				case 'C':{
+					int w;
+					cout << "Podaj wartosc elementu: ";cin >> w;
+					k.dodajElement(w);
+					break;
+						 }
+				case 'D':{
+					   break;}
+				default: break;
+			}
+			}while(Q!='Q');
+			break;
 		}
 	default:
 		{

@@ -25,9 +25,9 @@ void tablica::usun_element(int i){
 };
 void tablica::dodaj_element(int i){
 	int *tab_pomocnicza = new int[ilosc_elementow+1];
-	for(int a=0;a<=ilosc_elementow;a++){
+	for(int a=0;a<=(ilosc_elementow-1);a++){
 		tab_pomocnicza[a]=tab[a];}
-	tab_pomocnicza[ilosc_elementow+1]=i;
+	tab_pomocnicza[ilosc_elementow]=i;
 	tab=tab_pomocnicza;
 	ilosc_elementow++;
 };
