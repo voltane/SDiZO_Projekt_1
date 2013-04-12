@@ -1,5 +1,4 @@
 #include "struktury.h"
-#include <time.h>
 #include <iostream>
 using namespace std;
 int main(){
@@ -83,7 +82,7 @@ int main(){
 				unsigned long ilosc;
 				int max, min;
 				system("cls");
-				cout << "\nKopiec. Wybierz co chcesz zrobic:\nA. Nowy kopiec.\nB.Wyswietl kopiec.\nC.Dodaj element.\nD. Usunac element.\nQ.Wroc do menu glownego.\n";
+				cout << "\nKopiec. Wybierz co chcesz zrobic:\nA. Nowy kopiec.\nB.Wyswietl kopiec.\nC.Dodaj element.\nD. Usunac element.\nE. Przywroc wlasnosc kopca\nQ.Wroc do menu glownego.\n";
 				cin >> Q;
 			switch(Q){
 				case 'A':{
@@ -93,7 +92,8 @@ int main(){
 				}
 				case 'B':{
 					char w;
-					cout << k.wyswietlKopiec();
+					cout << k.wyswietlKopiec() <<endl;
+					cout << k.zwrocKorzen();
 					cin >> w;
 						 break;}
 				case 'C':{
@@ -104,6 +104,16 @@ int main(){
 						 }
 				case 'D':{
 					   break;}
+				case 'E':{
+					char a;
+					cout << "Kopiec przed przywarcaniem wlasnosci:"<<endl;
+					cout << k.wyswietlKopiec()<<endl;
+					k.przywrocWlasnoscKopca(k.zwrocIloscElementow());
+					cout << "Kopiec po przywroceniu wlasnosci:"<<endl;
+					cout << k.wyswietlKopiec()<<endl;
+					cout << "Sprawdzenie kopcowania: "<<k.sprawdzKopcowanie()<<endl;
+					cin >> a;
+					break;}
 				default: break;
 			}
 			}while(Q!='Q');

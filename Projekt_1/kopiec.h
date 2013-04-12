@@ -14,13 +14,18 @@ public:
 	 kopiec();
 	 ~kopiec();
 	 // operacje na kopcu
-	 int inline zwrocKorzen();
+	 int zwrocKorzen();
+	 int zwrocIloscElementow();
 	 void dodajElement(int i);
 	 int usunKorzen();
+	 void przywrocWlasnoscKorzenia();
 	 void przywrocWlasnoscKopca(int i);
+	 void przywrocWlasnosc(int i);
 	 // inne operacje
 	 void nowyKopiec(int ilosc,int min, int max, int seed);
+	 void usunKopiec();
 	 std::string wyswietlKopiec();
+	 std::string sprawdzKopcowanie();
 
 
 };

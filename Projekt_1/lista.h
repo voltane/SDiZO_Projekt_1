@@ -25,4 +25,5 @@ private:
 	unsigned long ilosc_elementow, ilosc_list;
 };
 
+
 #endif

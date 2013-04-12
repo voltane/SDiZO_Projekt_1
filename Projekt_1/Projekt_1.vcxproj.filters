@@ -27,7 +27,7 @@
     <ClInclude Include="struktury.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="drzewo_binarne.h">
+    <ClInclude Include="drzewo_cc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,10 +41,10 @@
     <ClCompile Include="lista.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="drzewo_binarne.cpp">
+    <ClCompile Include="testy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="testy.cpp">
+    <ClCompile Include="drzewo_cc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

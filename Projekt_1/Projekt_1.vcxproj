@@ -76,14 +76,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="drzewo_binarne.h" />
+    <ClInclude Include="drzewo_cc.h" />
     <ClInclude Include="kopiec.h" />
     <ClInclude Include="lista.h" />
     <ClInclude Include="struktury.h" />
     <ClInclude Include="tablica.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="drzewo_binarne.cpp" />
+    <ClCompile Include="drzewo_cc.cpp" />
     <ClCompile Include="kopiec.cpp" />
     <ClCompile Include="lista.cpp" />
     <ClCompile Include="tablica.cpp" />
