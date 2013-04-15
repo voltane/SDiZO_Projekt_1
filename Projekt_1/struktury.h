@@ -13,6 +13,6 @@
 #include "tablica.h"
 #include "lista.h"
 #include "kopiec.h"
-#include "drzewo_binarne.h"
+#include "drzewo_cc.h"
 
 #endif

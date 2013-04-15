@@ -19,8 +19,8 @@ public:
 	 void dodajElement(int i);
 	 int usunKorzen();
 	 void przywrocWlasnoscKorzenia();
-	 void przywrocWlasnoscKopca(int i);
-	 void przywrocWlasnosc(int i);
+	 void przywrocWlasnoscKopca(int i); // przywracanie wlasnosci calego kopca, od ostatniego elementu
+	 void przywrocWlasnosc(int i); // przywracanie wlasnosci od podanego rodzica
 	 // inne operacje
 	 void nowyKopiec(int ilosc,int min, int max, int seed);
 	 void usunKopiec();
