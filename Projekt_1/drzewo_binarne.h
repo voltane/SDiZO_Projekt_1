@@ -16,8 +16,11 @@ public:
 	ElementDrzewa *podajPrawegoPotomka(ElementDrzewa *p);
 	ElementDrzewa *podajLewegoPotomka(ElementDrzewa *p);
 	ElementDrzewa dodajElement(int wartosc);
-	ElementDrzewa utworzKorzen(int wartosc);
-	std::string wyswietlDrzewo();
+	ElementDrzewa *utworzKorzen(int wartosc);
+	ElementDrzewa *wyszukajElement(int wartosc);
+	ElementDrzewa *podajKorzen();
+	std::string wyswietlDrzewoInOrder(std::string wynik, ElementDrzewa *p);
+	std::string wyswietlElement(ElementDrzewa *p);
 	drzewo_binarne(void);
 	~drzewo_binarne(void);
 private:

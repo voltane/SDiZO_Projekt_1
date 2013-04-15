@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 	char w;
 	do{
-	cout << "\nTu testujemy struktury.\n [T] Tablica.\n [L] Lista.\n [K] Kopiec binarny.\n [Q] Koniec."<<endl;
+	cout << "\nTu testujemy struktury.\n [T] Tablica.\n [L] Lista.\n [K] Kopiec binarny.\n [D] Drzewo Binarne\n [Q] Koniec."<<endl;
 	cin >> w;
 	switch(w){
 	case 'T':{
@@ -119,6 +119,37 @@ int main(){
 			}while(Q!='Q');
 			break;
 		}
+	case 'D':{
+		drzewo_binarne b;
+		int x;
+		system("cls");
+		cout << "Drzewo binarne. Wybierz co chcesz zrobic:\n[1]. Nowe drzewo.\n[2]. Dodaj element.\n[3] Usun element.\n[4]. Wyszukaj element.\n [5]. Wyswietl drzewo.";
+		cin >> x;
+		switch(x){
+		case 1:{
+			int ilosc, min, max;
+			cout << "Podaj ilosc: "; cin >> ilosc;
+			cout << "\n Podaj wartosc min: "; cin >> min;
+			cout << "\n Podaj wartosc max: "; cin >> max;
+			b.noweDrzewo(ilosc, min, max, time(NULL));
+			std:;string wynik;
+			cout << b.wyswietlDrzewoInOrder(wynik,b.podajKorzen());
+			   break;}
+		case 2:{
+
+			   break;}
+		case 3:{
+
+			break;}
+		case 4:{
+			int k;
+			cout << "Wpisz wartosc: "; cin >> k;
+			cout << b.wyswietlElement(b.wyszukajElement(k));
+			break;}
+		default:
+			cout << "Spierdalaj";
+			break;}
+			 }
 	default:
 		{
 			cout << "...";

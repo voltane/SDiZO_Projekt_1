@@ -13,7 +13,6 @@ public:
 	void dodajNaPoczatek(ElementListy *p); // dodajemy na poczatek
 	void dodajNaKoniec(ElementListy *p); // dodajemy na koniec
 	void dodajWSrodku(ElementListy *element,ElementListy *poprzednik);
-
 	ElementListy *NowyElement(int wartosc); // nowy element listy
 	void UsunElement(ElementListy *element);
 	ElementListy *WyszukajElement(int index);
