@@ -30,6 +30,12 @@
     <ClInclude Include="drzewo_cc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drzewo_binarne.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="czas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tablica.cpp">
@@ -47,5 +53,14 @@
     <ClCompile Include="drzewo_cc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="drzewo_binarne.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="czas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
